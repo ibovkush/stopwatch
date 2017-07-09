@@ -31,7 +31,7 @@ gulp.task('jsLibs', function () {
 });
 
 gulp.task('jsCode', function () {
-    return gulp.src('./js/**/*.js')
+    return gulp.src(['./js/**/*.js', './js/*.js'])
         .pipe(concat('app.js'))
         .pipe(gulp.dest('./wwwroot/scripts/app'));
 });
