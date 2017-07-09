@@ -1,0 +1,133 @@
+﻿body {
+    background-color: #333;
+}
+
+.page {
+    width: 405px;
+    margin: 0 auto;
+}
+
+.stopWatch {
+    position: relative;
+    background-color: #242424;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px auto;
+    width: 100%;
+    height: 163px;
+    box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,1);
+}
+
+.numbers {
+    font-size: 49px;
+    line-height: 33px;
+    font-family: digital,arial,verdana;
+    color: #81d830;
+    letter-spacing: 0;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: transparent;
+    z-index: 10;
+    right: 0;
+    width: 200px;
+    margin: auto;
+    height: 33px;
+}
+
+.items {
+    position: relative;
+    height: 72px;
+    width: 100%;
+    border-bottom: 1px solid #707070;
+}
+
+.items .numbers {
+    font-size: 27px;
+    color: #fff;
+    margin: auto 0;
+    line-height: 19px;
+    height: 19px;
+    top: 0;
+    bottom: 0;
+}
+
+.items .numbers.background {
+    color: #464646;
+}
+
+.numbers.background {
+    color: #334622;
+    z-index: 1;
+}
+
+@font-face {
+    font-family: 'digital';
+    src: url('/fonts/digital-7(mono).ttf');
+}
+
+.container {
+    text-align: center;
+}
+
+.buttons {
+    height: 57px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.buttons button {
+    cursor: pointer;
+    height: 57px;
+    font-size: 24px;
+    background-color: #ffffff;
+    border: 1px solid #CCCCCC;
+    width: 81px;
+    float: left;
+}
+
+.buttons button.right {
+    border-bottom-right-radius: 10px;
+}
+
+
+.buttons button.big {
+    width: 243px;
+    border-bottom-left-radius: 10px;
+    padding-left: 88px;
+    text-align: left;
+}
+
+span.icon {
+    font-size: 14px;
+    vertical-align: 3px;
+}
+
+.remove {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 0;
+    text-transform: uppercase;
+    width: 72px;
+    height: 30px;
+    border: 0;
+    color: #fff;
+    background-color: red;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0;
+}
+
+.loader{
+    padding:10px;
+    color:#fff;
+    font-size:25px;
+    text-align:center;
+}
+
+.ng-hide{
+    display:none;
+}

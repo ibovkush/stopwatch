@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div ng-app="stopwatchApp">
+        <div ng-controller="mainCtrl" class="page">
+            <div class="ng-hide" ng-show="isLoaded">
+
+                <div class="container">
+                    <div class="stopWatch">
+                        <div class="numbers background">88:88.88</div>
+                        <div class="numbers" ng-bind="momentDuration | toTimeBlinking"></div>
+                        <div class="buttons">
+                            <button ng-show="!isCounting" class="big" ng-click="start()"><span class="icon"><i class="fa fa-play" aria-hidden="true"></i></span> Play</button>
+                            <button ng-show="isCounting" class="big ng-hide" ng-click="stop()"><span class="icon"><i class="fa fa-pause" aria-hidden="true"></i></span> Pause</button>
+                            <button ng-click="addRecord()"><i class="fa fa-clock-o" aria-hidden="true"></i></button>
+                            <button class="right" ng-click="clear()"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="items" ng-repeat="item in items" ng-mouseover="item.showRemove=true;" ng-mouseleave="item.showRemove=false;">
+                    <div class="numbers background">88:88.88</div>
+                    <div class="numbers" ng-bind="item.value | toTime"></div>
+                    <button class="remove ng-hide" ng-show="item.showRemove" ng-click="removeRecord(item)">Remove</button>
+                </div>
+            </div>
+            <div ng-hide="isLoaded" class="loader">
+                Loading...
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="scripts/libs/underscore/underscore.js"></script>
+    <script type="text/javascript" src="scripts/libs/moment/moment.js"></script>
+    <script type="text/javascript" src="scripts/libs/moment-duration-format/lib/moment-duration-format.js"></script>
+    
+    <script type="text/javascript" src="scripts/libs/angular/angular.js"></script>
+    <script type="text/javascript" src="scripts/libs/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script type="text/javascript" src="scripts/app/app.js"></script>
+</body>
+
+</html>
